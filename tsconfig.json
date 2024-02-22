@@ -1,0 +1,22 @@
+{
+    // Opções do compilador TypeScript
+    "compilerOptions": {
+        // Diretório de saída para os arquivos compilados
+        "outDir": "dist/js",  
+        // Versão do ECMAScript para a qual o código deve ser compilado
+        "target": "ES6",
+        // Impede a emissão de arquivos de saída se houver erros durante a compilação
+        "noEmitOnError": true,
+        "noImplicitAny": true
+    },
+    // Lista de arquivos a serem incluídos na compilação
+    "include": [
+        // Inclui todos os arquivos dentro do diretório 'app' e seus subdiretórios
+        "app/**/*",
+        // Inclui especificamente o arquivo 'app.ts' localizado na raiz do diretório 'app'
+        "app/app.ts"
+    ]
+}
+
+// compile serve para compilar o ts para transformar em js
+// watch é qdo o compilador monitora os arquivos
