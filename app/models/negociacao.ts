@@ -22,4 +22,12 @@ export class Negociacao {
     get volume(): number {
         return this.valor * this.quantidade;
     }
+
+    public static criaDe(dataTxt: string, quantidadeTxt: string, valorTxt: string) : Negociacao{
+        const exp = /-/g;
+        const date = new Date(dataTxt.replace(exp, ','));
+        const quantidade = parseInt(quantidadeTxt);
+        const valor = parseFloat(valorTxt);
+        return new Negociacao(date, quantidade,valor);
+    }
 }

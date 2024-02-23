@@ -5,17 +5,17 @@ export class Negociacao {
         this.valor = valor;
     }
     get data() {
-        // programação defensiva, evitar mudar a datas
         const data = new Date(this._data.getTime());
         return data;
     }
-    // get quantidade(): number {
-    //     return this._quantidade;
-    // }
-    // get valor(): number {
-    //     return this._valor;
-    // }
     get volume() {
         return this.valor * this.quantidade;
+    }
+    static criaDe(dataTxt, quantidadeTxt, valorTxt) {
+        const exp = /-/g;
+        const date = new Date(dataTxt.replace(exp, ','));
+        const quantidade = parseInt(quantidadeTxt);
+        const valor = parseFloat(valorTxt);
+        return new Negociacao(date, quantidade, valor);
     }
 }

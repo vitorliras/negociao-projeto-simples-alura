@@ -7,7 +7,9 @@
         "target": "ES6",
         // Impede a emissão de arquivos de saída se houver erros durante a compilação
         "noEmitOnError": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "removeComments":true,
+        "strictNullChecks": false
     },
     // Lista de arquivos a serem incluídos na compilação
     "include": [
