@@ -9,7 +9,7 @@
         "noEmitOnError": true,
         "noImplicitAny": true,
         "removeComments":true,
-        "strictNullChecks": false
+        "strictNullChecks": true
     },
     // Lista de arquivos a serem incluídos na compilação
     "include": [
